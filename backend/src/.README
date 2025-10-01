@@ -1,0 +1,59 @@
+# Rondo Mundi Backend
+
+This is the backend for the Rondo Mundi lottery application, implemented in Rust using [Actix Web](https://actix.rs/).
+
+## Features
+
+- Create and manage lotteries
+- Buy tickets for active lotteries
+- Pick a winner using cryptographically secure randomness
+- View details of individual lotteries
+- List all lotteries
+- Health check endpoint
+
+## API Endpoints
+
+- `GET /health` — Health check
+- `POST /lottery` — Create a new lottery
+- `GET /lottery/{lottery_id}` — Get details of a lottery
+- `POST /lottery/{lottery_id}/buy` — Buy tickets for a lottery
+- `POST /lottery/{lottery_id}/pick_winner` — Pick a winner (admin only)
+- `GET /lotteries` — List all lotteries
+
+## Running Locally
+
+1. **Install Rust**: https://rustup.rs/
+2. **Install dependencies**:  
+   In the `backend` directory, run:
+   ```sh
+   cargo build
+   ```
+3. **Run the server**:  
+   ```sh
+   cargo run
+   ```
+   The server will start on `0.0.0.0:8080`.
+
+## Project Structure
+
+```
+.env
+.gitignore
+backend/
+    Cargo.toml
+    Cargo.lock
+    src/
+        main.rs
+```
+
+## Environment
+
+- Rust 2024 Edition
+- Actix Web 4.x
+- Tokio
+- Serde
+- UUID
+- Chrono
+- Rand
+
+##
